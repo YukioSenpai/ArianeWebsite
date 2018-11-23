@@ -1,0 +1,20 @@
+extends ./partials/layout.pug
+
+block head
+    link(href="/css/signup.css", type="text/css", rel="stylesheet")
+
+block content
+    .container#signup
+        .row
+            form.col.s3(action="/signup", method="post")
+                h2 > Sign Up
+                .input-field
+                    i.material-icons.prefix account_circle
+                    input.validate#email(type="text", name="username")
+                    label(for="username") Email
+                .input-field
+                    i.material-icons.prefix lock_outline
+                    input.validate#password(type="password", name="password")
+                    label(for="password") Password
+                .center
+                    button.btn#submit(type="submit") Validate

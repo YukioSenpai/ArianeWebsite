@@ -1,0 +1,9 @@
+{
+  "credentials": {
+    "host": "localhost",
+    "user": "magenta",
+    "password": "secret",
+    "database": "magenta_showcase",
+    "dialect": "mysql"
+  }
+}

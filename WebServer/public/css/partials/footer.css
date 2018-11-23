@@ -1,0 +1,9 @@
+footer {
+    padding-top: 0;
+    background-color: #8a0089 !important;
+
+}
+.footer-copyright {
+    padding: 0;
+    min-height: 0;
+}

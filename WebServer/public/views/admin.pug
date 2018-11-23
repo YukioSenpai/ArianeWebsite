@@ -1,0 +1,9 @@
+extends ./partials/layout.pug
+
+block head
+    link(href="/css/admin.css", type="text/css", rel="stylesheet")
+
+block content
+    .container#login
+        h2 > Profile
+        p Connect as #{user.username}

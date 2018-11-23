@@ -1,0 +1,15 @@
+{
+  "loginRedirect": "/",
+  "loginFailureRedirect": "/login",
+  "app": {
+    "viewEngine": "pug",
+    "session": {
+      "secret": "secret"
+    }
+  },
+  "frontend": {
+    "title": "Magenta Showcase",
+    "WSS_URL": "localhost:3001",
+    "path": "/public"
+  }
+}

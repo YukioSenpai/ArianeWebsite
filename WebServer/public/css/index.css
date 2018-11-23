@@ -1,0 +1,39 @@
+#background h4, #background h5 {
+    font-family: "roboto-light";
+}
+#background {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/cheese.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#background *{
+    z-index: 2;
+}
+
+#background ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    opacity: 0.8;
+}
+
+
+#ModuleOverview {
+    height: 80vh;
+}
+
