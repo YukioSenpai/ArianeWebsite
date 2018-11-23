@@ -25,7 +25,7 @@ block content
                     .card-content.white-text
                         span.card-title ORM
                         p
-                            | The ORM (Object Relational Mapping) in Magenta use Sequelize for relational mysql databases. It act as a data store for the entire application.
+                            | The ORM (Object Relational Mapping) in Magenta use Sequelize for relational mysql databases. It acts as a data store for the entire application.
                             br
                             | The only available data structures in this showcase is text containing a label and a value.
                     .card-action
@@ -45,7 +45,7 @@ block content
                 .card
                     .card-content
                         span.card-title Web Server
-                        p The Web Server module configure & handle http requests. By default it only exposes website's related static files but other modules will add functionalities.
+                        p The Web Server module configures & handles http requests. By default it only exposes website's related static files but other modules will add functionalities.
                     .card-tabs
                         ul.tabs.tabs-fixed-width
                             li.tab
@@ -55,7 +55,7 @@ block content
                             li.tab
                                 a(href='#wsfu') WS FileUpload
                     .card-content.grey.lighten-4
-                        #wsauth The Authentication WebServer bind auth strategies to http endpoinds, by default POST:/login POST:/signup GET:/logout
+                        #wsauth The Authentication WebServer binds auth strategies to http endpoinds, by default POST:/login POST:/signup GET:/logout
                             if !user
                                 form(action="/login", method="post")
                                     .input-field
@@ -71,8 +71,8 @@ block content
                             else
                                 br
                                 a.btn(href="/logout") Logout
-                        #wsapi The WebServer API bind the CRUD ORM's API to HTTP transport in a classic RESTful way
-                        #wsfu The WebServer FileUpload simply manage file uploading through HTTP POST:/uploads/:id
+                        #wsapi The WebServer API binds the CRUD ORM's API to HTTP transport in a classic RESTful way
+                        #wsfu The WebServer FileUpload simply manages file uploading through HTTP POST:/uploads/:id
                             h5 > Send a file
                             form(action="/uploads", enctype="multipart/form-data", method="post")
                                 input(type="file", name="fileUpload")
