@@ -1,20 +1,9 @@
-footer.page-footer
-    .container
-        .row
-            .col.s12
-                h5 Magenta Boilerplate powered by Node.JS
-                p.grey-text.text-lighten-4 This is a Showcase page !
-    .footer-copyright
-        .container
-            if user
-                a.btn.grey.grey-text.text-lighten-4.right(href='/logout') Logout
-            else
-                a.btn.grey.grey-text.text-lighten-4.right(href="/admin") Admin Panel
 
+script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+script(src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js")
 script(src="/js/lib/jquery.min.js", type="text/javascript")
-script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
-script(src="/js/lib/angular.min.js", type="text/javascript")
-script(src="/js/lib/angular-websocket.js", type="text/javascript")
+script(src="/js/init.js", type="text/javascript")
 script(type="text/javascript").
     var WSS_URL = "#{WSS_URL}";
-script(src="/js/init.js", type="text/javascript")
+
+block footer

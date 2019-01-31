@@ -1,48 +1,10 @@
 body {
     padding-top: 45px;
-    font-family: 'Roboto', sans-serif;
-}
-/*------------------------------------------------------------------------------------------------
-
-
-
-Header
-
-
-
--------------------------------------------------------------------------------------------------*/
-
-header {
-
-    display: flex;
-    background: #262626;
-    height: 45px;
-    position: fixed;
-    top: 0;
-    transition: top 0.2s ease-in-out;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.navigation a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1em;
-    color: white;
-    box-shadow: 0 1px 0 rgba(38, 38, 38, .7) inset,
-    0 -2px 0 hsl(0,0%,100%) inset;
-    text-shadow: 0 1.5px 0 rgba(128, 128, 128, .4);
-
-}
-
-.navigation a:active {
-    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1));
-    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
-}
-
-.nav-up {
-    top: -45px;
+    font-family: "Ubuntu Condensed", serif;
+    background-color: #262626;
+    background-image: url("../img/ILLU GUINGUETTES.jpg");
+    background-position: 50% 50%;
+    background-size: 1000px;
 }
 
 /*------------------------------------------------------------------------------------------------
@@ -56,7 +18,8 @@ Main
 -------------------------------------------------------------------------------------------------*/
 
 main {
-    height: 2000px;
+    margin-top: 70px;
+    height: 1000px;
 }
 
 
@@ -72,19 +35,23 @@ main {
 }
 
 .contact-form .separator {
+    margin-top: 25px;
     border-bottom: solid 1px #ccc;
     margin-bottom: 15px;
 }
 
 .contact-form .form {
+    margin-top: 45px;
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    color: #F1E4E4;
 }
 
+
 .contact-form_title {
-    color: #333;
-    text-align: left;
+    color: #F1E4E4;;
+    text-align: center;
     font-size: 28px;
     justify-content: center;
 }
@@ -97,6 +64,7 @@ main {
     padding: 10px 7px;
     margin-bottom: 15px;
     outline: none;
+    margin-top: 20px;
 }
 
 .contact-form textarea {
@@ -111,10 +79,11 @@ main {
     padding: 10px 50px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 44px;
 }
 
 .contact-form .button:hover {
-    background: #ea532a;
+    background: #ea4e27;
     border: solid 1px #ea532a;
 }
 

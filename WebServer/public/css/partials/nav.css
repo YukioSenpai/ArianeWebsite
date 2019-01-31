@@ -1,3 +1,44 @@
-nav {
-    background-color: #8a0089;
+/*------------------------------------------------------------------------------------------------
+
+
+
+Header
+
+
+
+-------------------------------------------------------------------------------------------------*/
+
+header {
+
+    display: flex;
+    background: #262626;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    transition: top 0.05s ease-in-out;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    font-size: 121%;
+}
+
+
+.navigation a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+    color: white;
+    box-shadow: 0 1px 0 rgba(38, 38, 38, .7) inset,
+    0 -2px 0 hsl(0,0%,100%) inset;
+    text-shadow: 0 1.5px 0 rgba(128, 128, 128, .4);
+
+}
+
+.navigation a:active {
+    /*background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1));*/
+    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
+}
+
+.nav-up {
+    top: -55px;
 }

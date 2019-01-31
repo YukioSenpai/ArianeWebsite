@@ -2,9 +2,9 @@ doctype html
 html
     head
         include ./head
-    body(ng-app="magenta-showcase")
-        // include ./nav
+    body
+        include ./nav
         div#main
             block content
+        include ./footer
         block footer
-            include ./footer

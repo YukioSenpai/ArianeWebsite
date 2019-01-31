@@ -2,22 +2,14 @@ extends ./partials/layout.pug
 
 block head
 
-    link(href="/css/login.css", type="text/css", rel="stylesheet")
+    link(href="/css/contact.css", type="text/css", rel="stylesheet")
 
 block content
-
-    header.nav-down
-        ul.navigation
-            li
-                a(href='login') Home
-                a(href='#') About
-                a(href='#') Work
-                a(href='#') Contact
 
     main
 
         #contact-form.contact-form
-            h1.contact-form_title Contact Form
+            h1.contact-form_title Contact Me
             .separator
             .loading(v-if='isSending') Sending...
             form.form(@submit='onSubmit')
@@ -26,6 +18,20 @@ block content
                 textarea(name='message', v-model='contact.message', rows='4', placeholder='Message')
                 button.button Send
 
+    footer
+
+        #footer-wrap
+            #footer
+                p
+                    | © 2019 Fuego Entertainment
+
+                    | Design by : &nbsp;
+                    a(href='/index') Arianne Montagne
+                    |  |
+
+                    | Code by : &nbsp;
+                    a(href='/index') Steven Travers
+
 block footer
 
-    include ./partials/footer.pug
+    script(src="/js/contact.js", type="text/javascript")

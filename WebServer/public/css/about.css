@@ -1,15 +1,82 @@
-/*block content
-.container#signup
-.row
-form.col.s3(action="/signup", method="post")
-h2 > Sign Up
-.input-field
-i.material-icons.prefix account_circle
-input.validate#email(type="text", name="username")
-label(for="username") Email
-                      .input-field
-                      i.material-icons.prefix lock_outline
-                      input.validate#password(type="password", name="password")
-label(for="password") Password
-                      .center
-                      button.btn#submit(type="submit") Validate*/
+body {
+    padding-top: 45px;
+    font-family: "Ubuntu Condensed", serif;
+    background-color: #262626;
+    background-image: url("../img/P1050542.svg");
+    background-size: 1625px;
+}
+
+/*------------------------------------------------------------------------------------------------
+
+
+
+Main
+
+
+
+-------------------------------------------------------------------------------------------------*/
+
+main {
+    height: 1200px;
+    text-align: center;
+}
+
+.main {
+    justify-content: center;
+}
+.img {
+    margin-top: 50px;
+}
+.h21 {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 220%;
+    color: #F1E4E4;
+}
+
+.hr {
+    margin-top: 27px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+
+}
+
+.p1 {
+    margin-top: 50px;
+    font-style: italic;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    font-size: 150%;
+    color: #fafafa;
+}
+.p2 {
+    margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    text-align: justify;
+    font-size: 120%;
+    color: #A9A9A9;
+}
+.p3 {
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    text-align: justify;
+    font-size: 120%;
+    color: #A9A9A9;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+

@@ -1,49 +1,38 @@
-'use strict';
+var didScroll;
+var lastScrollTop = 0;
+var delta = 0.5;
+var navbarHeight = $('header').outerHeight();
 
-M.AutoInit();
-
-Object.keys($('#nav-mobile i')).forEach(index=>{try {$('#nav-mobile i')[index].style.display = 'none';} catch (e) {}});
-
-let $root = $('html, body');
-$('a.navigation').click(function () {
-    $root.animate({
-        scrollTop: $('#' + $.attr(this, 'href').split('#')[1]).offset().top
-    }, 600);
-    return false;
+$(window).scroll(function(event){
+    didScroll = true;
 });
 
-angular.module("magenta-showcase", ['ngWebSocket'])
-    .controller('textCtrl', ($scope, $http) => {
-        $http.get('/api/text/1')
-            .then(res => {
-                $scope.text = res.data;
-            }, err => {
-                console.error(err);
-            });
-    })
-    .factory('MyData', function($websocket) {
-        // Open a WebSocket connection
-        var url = 'localhost/';
-        if(typeof WSS_URL !== 'undefined')
-            url = WSS_URL;
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
 
-        var dataStream = $websocket('ws://' + url);
+function hasScrolled() {
+    var st = $(this).scrollTop();
 
-        var collection = [];
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
 
-        dataStream.onMessage(function(message) {
-            collection.push(JSON.parse(message.data));
-        });
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
 
-        var methods = {
-            collection: collection,
-            get: function() {
-                dataStream.send(JSON.stringify({ action: 'get' }));
-            }
-        };
+    lastScrollTop = st;
+}
 
-        return methods;
-    })
-    .controller('WSCtrl', function ($scope, MyData) {
-        $scope.MyData = MyData;
-    });

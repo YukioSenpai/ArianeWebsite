@@ -9,28 +9,29 @@ module.exports = (WS) => {
         res.redirect(WS.config.loginFailureRedirect);
     };
 
-    WS.router.get('/', (req, res) => {
+    WS.router.get('/index', (req, res) => {
         res.render('index', {
             user: req.user
         });
         res.end();
     });
 
-    WS.router.get('/login', (req, res) => {
-        res.render('login', {message: req.flash('loginMessage')});
+    WS.router.get('/contact', (req, res) => {
+        res.render('contact', {message: req.flash('loginMessage')});
         res.end();
     });
 
-    WS.router.get('/signup', isLoggedIn, (req, res) => {
-        res.render('signup', {
-            user: req.user,
-            message: req.flash('signupMessage')});
-        res.end();
-    });
-
-    WS.router.get('/admin', isLoggedIn, (req, res) => {
-        res.render('admin', {
+    WS.router.get('/about', (req, res) => {
+        res.render('about', {
             user: req.user
         });
+        res.end();
+    });
+
+    WS.router.get('/work', (req, res) => {
+        res.render('work', {
+            user: req.user
+        });
+        res.end();
     });
 };

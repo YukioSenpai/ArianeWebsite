@@ -1,9 +1,48 @@
 extends ./partials/layout.pug
 
 block head
-    link(href="/css/admin.css", type="text/css", rel="stylesheet")
+
+    link(href="/css/work.css", type="text/css", rel="stylesheet")
+
 
 block content
-    .container#login
-        h2 > Profile
-        p Connect as #{user.username}
+
+    main
+        .margin
+            #app
+                v-app#inspire
+                    .text-xs-center
+                        .margin
+                            v-btn(round='', dark='') Stickers
+                            v-btn(round='', dark='') Posters
+                            v-btn(round='', dark='') Animation
+                            v-btn(round='', dark='') Others
+                .margin
+                v-app#inspire
+                    v-layout
+                        v-flex(xs12='', sm6='', offset-sm3='')
+                            v-card
+                                v-container(grid-list-sm='', fluid='')
+                                    v-layout(row='', wrap='')
+                                        v-flex(v-for='sticker in Stickers', :key='sticker.id', xs4='', d-flex='')
+                                            v-card.d-flex(flat='', tile='')
+                                                v-img.grey.lighten-2(:src= 'sticker.url', aspect-ratio='1')
+                                                    v-layout(slot='placeholder', fill-height='', align-center='', justify-center='', ma-0='')
+                                                        v-progress-circular(indeterminate='', color='grey lighten-5')
+
+    footer
+        #footer-wrap
+            #footer
+                p
+                    | © 2019 Fuego Entertainment
+
+                    | Design by : &nbsp;
+                    a(href='/index') Arianne Montagne
+                    |  |
+
+                    | Code by : &nbsp;
+                    a(href='/index') Steven Travers
+
+
+block footer
+    script(src="/js/work.js", type="text/javascript")
