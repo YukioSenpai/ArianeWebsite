@@ -1,0 +1,31 @@
+extends ./partials/layout.pug
+
+block head
+
+    link(href="/css/login.css", type="text/css", rel="stylesheet")
+
+block content
+
+    header.nav-down
+        ul.navigation
+            li
+                a(href='login') Home
+                a(href='#') About
+                a(href='#') Work
+                a(href='#') Contact
+
+    main
+
+        #contact-form.contact-form
+            h1.contact-form_title Contact Form
+            .separator
+            .loading(v-if='isSending') Sending...
+            form.form(@submit='onSubmit')
+                input(required='', name='name', v-model='contact.name', placeholder='Name', type='text', autocomplete='off')
+                input(required='', name='email', v-model='contact.email', placeholder='E-mail', type='email', autocomplete='off')
+                textarea(name='message', v-model='contact.message', rows='4', placeholder='Message')
+                button.button Send
+
+block footer
+
+    include ./partials/footer.pug
